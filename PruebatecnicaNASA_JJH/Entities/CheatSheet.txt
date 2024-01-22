@@ -1,0 +1,5 @@
+Enable-Migrations -ContextTypeName PruebatecnicaNASA_JJH.AsteroidContext  -ContextProjectName PruebatecnicaNASA_JJH  -StartUpProjectName PruebatecnicaNASA_JJH.Migrations -ProjectName PruebatecnicaNASA_JJH.Migrations
+
+Add-Migration -verbose Asteroid -StartUpProjectName PruebatecnicaNASA_JJH.Migrations -ProjectName PruebatecnicaNASA_JJH.Migrations -ConnectionString "Server=IBLAESMADC01977;Initial Catalog=PruebatecnicaNASA_JJH;Integrated Security=True; MultipleActiveResultSets=True" -ConnectionProviderName System.Data.SqlClient
+
+Update-Database -Verbose -StartUpProjectName PruebatecnicaNASA_JJH.Migrations -ProjectName PruebatecnicaNASA_JJH.Migrations -ConnectionString "Server=IBLAESMADC01977;Initial Catalog=PruebatecnicaNASA_JJH;Integrated Security=True; MultipleActiveResultSets=True" -ConnectionProviderName System.Data.SqlClient
