@@ -13,5 +13,5 @@ NOTA:
 A efectos prácticos es mejor utilzar un Handler ya que en DDD es donde debe ir el negocio expecífico y en el Service el negocio general.
 Se ha optado por hacer la lógica de negocio en el Service en vez de en un Handler porque es un proyecto pequeño y el Handler supondría una capa más.
 
-Observaciones:
+OBERSVACIONES:
 Los test unitarios no han sido finalizados con éxito, pero aclarar que tras cada desarrollo en mi experencia actual he tenido que hacer test unitarios con Moq por lo que tengo soltura con ellos, pero ha sido la parte del montaje desde 0 de los mismos la que se ha dificultado.
