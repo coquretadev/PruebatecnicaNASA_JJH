@@ -1,17 +1,26 @@
 ﻿using Newtonsoft.Json;
 using PruebatecnicaNASA_JJH.App.Dto;
+using System.ComponentModel.Design;
 
 namespace PruebatecnicaNASA_JJH.App.Services
 {
     public class AsteroidService : IAsteroidService
     {
         private readonly IConfiguration _configuration;
+        private readonly IHttppService _httpService;
+        private IHttppService object1;
+        private IConfiguration object2;
 
         public AsteroidService(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
+        public AsteroidService(IHttppService object1, IConfiguration object2)
+        {
+            this.object1 = object1;
+            this.object2 = object2;
+        }
 
         public async Task<IEnumerable<AsteroidResponseDto>> GetAsteroidsAsync(int days)
         {
@@ -30,6 +39,7 @@ namespace PruebatecnicaNASA_JJH.App.Services
             using (HttpClient client = new HttpClient())
             {
                 HttpResponseMessage response = await client.GetAsync(apiUrl);
+                //HttpResponseMessage response = await _httpService.GetAsync(apiUrl);
 
                 if (!response.IsSuccessStatusCode)
                 {
